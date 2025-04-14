@@ -1,0 +1,20 @@
+# Sensitive or config files
+.env
+
+# Local database files
+/data/
+*.db
+*.db~
+
+# Node packages
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# OS junk
+.vscode/
