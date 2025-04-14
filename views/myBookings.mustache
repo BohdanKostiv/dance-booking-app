@@ -1,0 +1,31 @@
+{{>partials/header}}
+
+<h1 class="mb-4 text-center">{{title}}</h1>
+<p class="text-center mb-5">Welcome, {{username}}. Here are your current bookings:</p>
+
+{{#bookings}}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">{{courseName}}</h5>
+      <p class="card-text">{{description}}</p>
+
+      <ul class="list-unstyled">
+        <li><strong>Schedule:</strong> {{schedule}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+        <li><strong>Price:</strong> {{price}}</li>
+      </ul>
+
+      <small class="text-muted">Booked on: {{date}}</small>
+
+      <form method="POST" action="/cancel-booking/{{_id}}" class="mt-3">
+        <button type="submit" class="btn btn-sm btn-outline-danger">Cancel Booking</button>
+      </form>
+    </div>
+  </div>
+{{/bookings}}
+
+{{^bookings}}
+  <div class="alert alert-info text-center">You have no bookings yet.</div>
+{{/bookings}}
+
+{{>partials/footer}}

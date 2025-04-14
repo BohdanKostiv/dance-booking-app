@@ -1,0 +1,30 @@
+{{>partials/header}}
+
+<div class="text-center">
+  <h1 class="mb-4">{{title}}</h1>
+  <p class="lead">Welcome to our dance platform! Book classes, explore styles, and improve your rhythm.</p>
+
+  {{^isUser}}{{^isOrganiser}}
+    <div class="mt-4">
+      <a href="/register-user" class="btn btn-outline-primary me-2">Register as Member</a>
+      <a href="/login-user" class="btn btn-primary me-2">Member Login</a>
+      <a href="/login" class="btn btn-dark">Organiser Login</a>
+    </div>
+  {{/isOrganiser}}{{/isUser}}
+
+  {{#isUser}}
+    <div class="alert alert-info mt-4">
+      <p>You are logged in as a <strong>member</strong>. Visit your bookings below.</p>
+      <a href="/my-bookings" class="btn btn-primary">Go to My Bookings</a>
+    </div>
+  {{/isUser}}
+
+  {{#isOrganiser}}
+    <div class="alert alert-warning mt-4">
+      <p>You are logged in as an <strong>organiser</strong>.</p>
+      <a href="/dashboard" class="btn btn-dark">Go to Dashboard</a>
+    </div>
+  {{/isOrganiser}}
+</div>
+
+{{>partials/footer}}

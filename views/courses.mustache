@@ -1,0 +1,36 @@
+{{>partials/header}}
+
+<h1 class="mb-4 text-center">{{title}}</h1>
+
+{{#courses}}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h4 class="card-title">{{name}}</h4>
+      <p class="card-text">{{description}}</p>
+
+      <ul class="list-unstyled mb-3">
+        <li><strong>Duration:</strong> {{duration}}</li>
+        <li><strong>Schedule:</strong> {{schedule}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+        <li><strong>Price:</strong> {{price}}</li>
+      </ul>
+
+      <form action="/book" method="POST" class="row g-3 align-items-end">
+        <input type="hidden" name="courseId" value="{{_id}}">
+        <div class="col-sm-6">
+          <label for="name-{{_id}}" class="form-label">Your Name:</label>
+          <input type="text" class="form-control" name="name" id="name-{{_id}}" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{{/courses}}
+
+{{^courses}}
+  <div class="alert alert-warning">No courses available at the moment.</div>
+{{/courses}}
+
+{{>partials/footer}}

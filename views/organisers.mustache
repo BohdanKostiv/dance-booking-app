@@ -1,0 +1,45 @@
+{{>partials/header}}
+
+<h1 class="mb-4 text-center">{{title}}</h1>
+
+<div class="card mx-auto mb-5" style="max-width: 500px;">
+  <div class="card-header bg-primary text-white">Add New Organiser</div>
+  <div class="card-body">
+    <form method="POST" action="/dashboard/add-organiser">
+      <div class="mb-3">
+        <label class="form-label">Username:</label>
+        <input name="username" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password:</label>
+        <input type="password" name="password" class="form-control" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-success">Add Organiser</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<h2 class="mb-3">Current Organisers</h2>
+
+{{#users}}
+  <div class="card mb-3">
+    <div class="card-body d-flex justify-content-between align-items-center">
+      <strong>{{user}}</strong>
+      {{^isCurrentUser}}
+        <form method="POST" action="/dashboard/delete-organiser/{{user}}">
+          <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+        </form>
+      {{/isCurrentUser}}
+    </div>
+  </div>
+{{/users}}
+
+{{^users}}
+  <div class="alert alert-info">No organisers found.</div>
+{{/users}}
+
+<a href="/dashboard" class="btn btn-secondary mt-4">← Back to Dashboard</a>
+
+{{>partials/footer}}
