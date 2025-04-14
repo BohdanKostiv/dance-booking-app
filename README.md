@@ -94,3 +94,27 @@ If no organiser exists, a default admin will be created on startup:
 
 ### My Bookings (Member View)
 ![Bookings](images/Courses-page.png)
+
+## Testing
+
+Manual testing was conducted for all major features. Each test was performed using valid inputs and compared with the expected result.
+
+| Test ID | Feature | Input | Expected Output | Pass/Fail | Screenshot |
+|--------|---------|-------|------------------|-----------|------------|
+| T1 | Organiser login | `admin/admin` | Redirect to dashboard | Pass | ![T1](images/T1.png) |
+| T2 | Member registration | New username & password | Redirect to login page | Pass | ![T2](images/T2.png) |
+| T3 | Book course | Valid name input | Course booked, appears in organiser view | Pass | ![T3](images/T3.png) |
+| T4 | Cancel booking (user) | Click “Cancel Booking” | Booking removed from user and organiser views | Pass | ![T4](images/T4.png) |
+| T5 | Add course | Complete course form | Course appears on homepage and dashboard | Pass | ![T5](images/T5.png) |
+| T6 | Edit course | Update fields | Dashboard shows updated course info | Pass | ![T6](images/T6.png) |
+| T7 | Delete course | Click delete | Course is removed | Pass | ![T7](images/T7.png) |
+| T8 | View bookings (organiser) | Open View Bookings | Show list of users for that course | Pass | ![T8](images/T8.png) |
+| T9 | Add organiser | Fill username/password | New organiser visible in list | Pass | ![T9](images/T9.png) |
+| T10 | Delete organiser | Click delete | Organiser is removed | Pass | ![T10](images/T10.png) |
+| T11 | Member login | Correct credentials | Redirect to My Bookings | Pass | ![T11](images/T11.png) |
+| T12 | View My Bookings | Visit `/my-bookings` | User sees their bookings | Pass | ![T12](images/T12.png) |
+| T13 | Protected routes | Try `/dashboard` without login | Redirect to login or access denied | Pass | ![T13](images/T13.png) |
+
+## Testing Summary
+
+Manual testing was completed for all core functionality. All features were tested against expected behaviour and passed. 13 out of 13 tests were passed succesfully showing expected output.
