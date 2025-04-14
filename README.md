@@ -123,4 +123,4 @@ Manual testing was completed for all core functionality. All features were teste
 
 Render link: https://dance-booking-app-czh7.onrender.com
 
-Please note that Render puts all free hosted websites on sleepmode before after 15 minutes of inactivity, so when you go to the website using the link above, please be patient and wait for around 20-60 seconds, thank you.
+Please note that Render puts all free hosted websites on sleepmode after 15 minutes of inactivity, so when you go to the website using the link above, please be patient and wait for around 20-60 seconds, thank you.
