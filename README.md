@@ -118,3 +118,9 @@ Manual testing was conducted for all major features. Each test was performed usi
 ## Testing Summary
 
 Manual testing was completed for all core functionality. All features were tested against expected behaviour and passed. 13 out of 13 tests were passed succesfully showing expected output.
+
+## Live website for observing and testing
+
+Render link: https://dance-booking-app-czh7.onrender.com
+
+Please note that Render puts all free hosted websites on sleepmode before after 15 minutes of inactivity, so when you go to the website using the link above, please be patient and wait for around 20-60 seconds, thank you.
