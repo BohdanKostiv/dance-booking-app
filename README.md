@@ -88,10 +88,10 @@ If no organiser exists, a default admin will be created on startup:
 ## Project Screenshots
 
 ### Homepage
-![Homepage](images/home-page.png)
+![Homepage](images/Home-page.png)
 
 ### Organiser Dashboard
-![Dashboard](images/dashboard-page.png)
+![Dashboard](images/Dashboard-page.png)
 
 ### My Bookings (Member View)
 ![Bookings](images/Courses-page.png)
