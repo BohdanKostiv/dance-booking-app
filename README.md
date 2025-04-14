@@ -61,7 +61,6 @@ The application follows an **MVC structure**:
 
 - Bootstrap was not required but was intentionally used as comfortable styling tool to meet the “user-friendly interface” requirement.
 - The entire app was built in VS Code and deployed using Render.
-- Registration for admins aka organisers is accesible only by manual navigating by typing /register to the home page address
 
 ---
 
